@@ -26,8 +26,7 @@ export class FocusOutComponent implements OnInit {
 
   ngOnInit(): void {
     this.testForm = new FormGroup({
-      field1: new FormControl(),
-      field2: new FormControl()
+      field1: new FormControl()
     })
   }
 
