@@ -16,8 +16,6 @@ export class FocusOutComponent implements OnInit {
   testForm!: FormGroup;
 
   messages!: Message[];
-
-  accordionClosed: boolean = false;
   
   @ViewChild('accordionTab') accordionTab!: Accordion
 
@@ -46,7 +44,6 @@ export class FocusOutComponent implements OnInit {
       this.openAccordion()
       this.openUnsavedChangesDialog()
     }
-    this.accordionClosed = true;
   }
 
   openUnsavedChangesDialog() {
