@@ -1,0 +1,24 @@
+<p-accordion (clickOutside)="onClickOutside($event)" [exclude]="'p-messages'" (onClose)="accordionClose()" #accordionTab>
+    <p-accordionTab #ref header="A Resume Subsection">
+        <br>
+        <form [formGroup]="testForm" class="">
+            <div class="p-grid p-fluid">
+                <span class="p-float-label">
+                    <input type="text" formControlName="field1" id="field1" pInputText>
+                    <label for="field1">Add Some Stuff</label>
+                </span>
+                <br>
+                <br>
+                <span class="p-float-label">
+                    <input type="text" formControlName="field2" id="field2" pInputText>  
+                    <label for="field2">Add Some More Stuff</label>          
+                </span>
+                <br>
+                <p-button label="Submit" (click)="onSubmit(testForm)"></p-button>
+            </div>
+        </form>
+    </p-accordionTab>
+</p-accordion>
+
+<p-confirmDialog [style]="{'width': '30vw'}" [baseZIndex]="10000"></p-confirmDialog>
+<p-messages [value]="messages"></p-messages>
