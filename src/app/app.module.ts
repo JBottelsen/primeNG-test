@@ -13,22 +13,14 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { AccordionModule } from 'primeng/accordion';
 import { InputTextModule } from 'primeng/inputtext';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { Messages, MessagesModule } from 'primeng/messages';
+import { MessagesModule } from 'primeng/messages';
 
-import { HttpService } from './services/http.service';
 import { AppComponent } from './app.component';
-
-import { AsyncDropdownComponent } from './components/async-dropdown/async-dropdown.component';
-import { ToggleFormComponent } from './components/toggle-form/toggle-form.component';
-import { SharePanelComponent } from './components/share-panel/share-panel.component';
 import { FocusOutComponent } from './components/accordion-test/focus-out/focus-out.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AsyncDropdownComponent,
-    ToggleFormComponent,
-    SharePanelComponent,
     FocusOutComponent,
   ],
   imports: [
@@ -49,9 +41,7 @@ import { FocusOutComponent } from './components/accordion-test/focus-out/focus-o
     ConfirmDialogModule,
     MessagesModule
   ],
-  providers: [
-    HttpService,
-  ],
+  providers: [],
   bootstrap: [ AppComponent ],
 })
 export class AppModule { }

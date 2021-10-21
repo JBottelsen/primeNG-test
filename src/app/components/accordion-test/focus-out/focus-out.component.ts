@@ -69,7 +69,6 @@ export class FocusOutComponent implements OnInit {
 
   onClickOutside(event: Event) {
     if(!this.testForm.pristine) {
-      console.log('This works?');
       this.openUnsavedChangesDialog();
     }
   }
