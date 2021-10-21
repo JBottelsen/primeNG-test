@@ -1,4 +1,9 @@
-<p-accordion (clickOutside)="onClickOutside($event)" [exclude]="'p-messages'" (onClose)="accordionClose()" #accordionTab>
+<p-accordion 
+    (clickOutside)="onClickOutside($event)" 
+    [exclude]="'p-messages'" 
+    (onClose)="accordionClose()" 
+    #accordionTab
+>
     <p-accordionTab #ref header="A Resume Subsection">
         <br>
         <form [formGroup]="testForm" class="">
