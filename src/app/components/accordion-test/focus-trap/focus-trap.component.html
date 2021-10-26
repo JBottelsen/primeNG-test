@@ -1,0 +1,59 @@
+<p-accordion>
+    <p-accordionTab header="Work Experience">
+        <div pFocusTrap>
+            <form action="">
+                <div class="grid">
+                    <div class="col-12">
+                        <label class="col-12" for="title">Title</label>
+                        <input class="col-12" type="text" id="title" pInputText>    
+                    </div>
+                    <div class="col-6">
+                        <label class="col-12" for="company">Company</label>
+                        <input class="col-12" type="text" id="company" pInputText>
+                    </div>
+                    <div class="col-6">
+                        <label class="col-12" for="job">Job Location</label>
+                        <input class="col-12" type="text" id="job" pInputText>         
+                    </div>
+                    <div class="col-12">
+                        <p-checkbox class="col-6" name="current" label="I am currently in this role"></p-checkbox>
+                    </div>
+                    <div class="col-6">
+                        <label class="col-12">Start Date</label>
+                        <p-calendar class="col-12" [showIcon]="true"></p-calendar>
+                    </div>
+                    <div class="col-6">
+                        <label class="col-12">End Date</label>
+                        <p-calendar class="col-12" [showIcon]="true"></p-calendar>
+                    </div>
+                    <div class="col-12">
+                        <label for="" class="col-11">Work Experience Description</label>
+                            <div class="flex align-items-center" style="margin-top: 2%;">
+                                <i class="pi pi-circle-on col-1" style="font-size: 0.7rem;"></i>
+                                <input type="text" class="col-11" pInputText placeholder="Consider highlighting your achievements">    
+                            </div>
+                        <label for="" class="col-12"></label>
+                            <div class="flex align-items-center">
+                                <i class="pi pi-circle-on col-1" style="font-size: 0.7rem;"></i>
+                                <input type="text" class="col-11" pInputText placeholder="Consider highlighting your achievements">    
+                            </div>
+                        <label for="" class="col-12"></label> 
+                            <div class="flex align-items-center">
+                                <i class="pi pi-circle-on col-1" style="font-size: 0.7rem;"></i>
+                                <input type="text" class="col-11" pInputText placeholder="Consider highlighting your achievements">        
+                            </div>
+                    </div>
+                    <div class="col-12 flex justify-content-center" style="margin-bottom: 1rem;">
+                        <button pButton class="p-button-raised">Select Portfolio Content</button>
+                    </div>
+                    <div class="col-12 flex justify-content-end">
+                        <div class="col-4 flex justify-content-between">
+                            <button pButton class="p-button-outlined" label="Cancel"></button>
+                            <button pButton class="p-button" label="Save" disabled="true"></button>    
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </p-accordionTab>
+</p-accordion>

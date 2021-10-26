@@ -14,14 +14,20 @@ import { AccordionModule } from 'primeng/accordion';
 import { InputTextModule } from 'primeng/inputtext';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { MessagesModule } from 'primeng/messages';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { CheckboxModule } from 'primeng/checkbox';
+import { CalendarModule } from 'primeng/calendar';
+import { FocusTrapModule } from 'primeng/focustrap'
 
 import { AppComponent } from './app.component';
 import { FocusOutComponent } from './components/accordion-test/focus-out/focus-out.component';
+import { FocusTrapComponent } from './components/accordion-test/focus-trap/focus-trap.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FocusOutComponent,
+    FocusTrapComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,12 @@ import { FocusOutComponent } from './components/accordion-test/focus-out/focus-o
     SelectButtonModule,
     InputTextModule,
     ConfirmDialogModule,
-    MessagesModule
+    MessagesModule,
+    InputTextareaModule,
+    CheckboxModule,
+    CalendarModule,
+    FocusTrapModule
+
   ],
   providers: [],
   bootstrap: [ AppComponent ],
