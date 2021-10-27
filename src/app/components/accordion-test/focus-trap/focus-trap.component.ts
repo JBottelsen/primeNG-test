@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Accordion } from 'primeng/accordion';
 
 @Component({
   selector: 'app-focus-trap',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FocusTrapComponent implements OnInit {
 
+  isFocusTrapDisabled: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onAccordionOpen() {
+   this.isFocusTrapDisabled = true;
+  }
+
+  onAccordionClose() {
+    this.isFocusTrapDisabled = false;
+  }
 }

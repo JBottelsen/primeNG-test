@@ -1,6 +1,9 @@
-<p-accordion>
+<p-accordion 
+    (onOpen)="onAccordionOpen()" 
+    (onClose)="onAccordionClose()"
+>
     <p-accordionTab header="Work Experience">
-        <div pFocusTrap>
+        <div *ngIf="isFocusTrapDisabled" pFocusTrap>
             <form action="">
                 <div class="grid">
                     <div class="col-12">
