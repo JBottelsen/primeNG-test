@@ -17,7 +17,8 @@ import { MessagesModule } from 'primeng/messages';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { CheckboxModule } from 'primeng/checkbox';
 import { CalendarModule } from 'primeng/calendar';
-import { FocusTrapModule } from 'primeng/focustrap'
+import { FocusTrapModule } from 'primeng/focustrap';
+import { ToastModule } from 'primeng/toast'
 
 import { AppComponent } from './app.component';
 import { FocusOutComponent } from './components/accordion-test/focus-out/focus-out.component';
@@ -49,7 +50,8 @@ import { FocusTrapComponent } from './components/accordion-test/focus-trap/focus
     InputTextareaModule,
     CheckboxModule,
     CalendarModule,
-    FocusTrapModule
+    FocusTrapModule,
+    ToastModule
 
   ],
   providers: [],
