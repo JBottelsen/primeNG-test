@@ -53,14 +53,12 @@ export class FocusOutComponent implements OnInit {
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
         this.messages = [{severity: 'warn', summary: 'Deleted!', detail:'Your Changes are gone'}]
+        this.testForm.reset()
       },
       reject: () => {
         this.messages = [{severity: 'success', summary: 'Not Deleted!', detail: 'Continue Editing'}]
       }
     });
-    setTimeout(() => {
-      this.clearMessage();
-    }, 5000);
   }
 
   clearMessage() {
