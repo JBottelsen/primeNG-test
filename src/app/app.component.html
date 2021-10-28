@@ -41,6 +41,17 @@
         <li>
             <p>When the accordion is open, the user is trapped inside the accordion when tabbing</p>
         </li>
+        <li>
+            <p>When the form is dirty, clicking the "Save" button clears the form, disables the directive
+            and closes the accordion which pops a modal informing the user their form data was accepted. The
+            user can tab through the rest of the page as needed.
+            </p>
+        </li>
+        <li>
+            <p>When the user clicks the cancel button, the accordion is closed and any remaining data in the 
+            form is cleared. The directive is also removed allowing the user to tab freely outside of the accordion.
+            </p>
+        </li>
     </ul>
     <app-focus-trap></app-focus-trap>
 </section>

@@ -15,8 +15,6 @@ export class FocusTrapComponent implements OnInit {
 
   isFocusTrapEnabled: boolean = false;
 
-  current: string[] = ["I am currently in this role"];
-
   activeTabs: boolean[] = [false];
 
   constructor(private message: MessageService) { }
@@ -26,7 +24,6 @@ export class FocusTrapComponent implements OnInit {
       title: new FormControl(),
       company: new FormControl(),
       location: new FormControl(),
-      current: new FormControl('this.current'),
       startDate: new FormControl(),
       endDate: new FormControl(),
       experienceDescription1: new FormControl(),
@@ -57,5 +54,6 @@ export class FocusTrapComponent implements OnInit {
   closeAccordion(index: number) {
     this.activeTabs[index] = !this.activeTabs[index]
     this.isFocusTrapEnabled = false;  
+    this.experienceForm.reset();
   }
 }
