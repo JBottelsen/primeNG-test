@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Accordion } from 'primeng/accordion';
 import { MessageService } from 'primeng/api';
 
 @Component({
