@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Accordion } from 'primeng/accordion';
 import { MessageService } from 'primeng/api';
 
 @Component({
@@ -14,7 +15,9 @@ export class FocusTrapComponent implements OnInit {
 
   isFocusTrapEnabled: boolean = false;
 
-  current: boolean = true;
+  current: string[] = ["I am currently in this role"];
+
+  activeTabs: boolean[] = [false];
 
   constructor(private message: MessageService) { }
 
@@ -32,12 +35,14 @@ export class FocusTrapComponent implements OnInit {
     })
   }
 
-  formOnSubmit(formData: FormGroup) {
+  formOnSubmit(formData: FormGroup, index: number) {
     if(formData.dirty) {
       console.log(formData);
       this.message.add({key: 'submitted', severity: 'success', summary: 'Success!',
-      detail: 'Successfully Submitted the Form'}) 
-      this.experienceForm.reset();  
+      detail: 'Successfully submitted the form'}) 
+      this.experienceForm.reset(); 
+      this.isFocusTrapEnabled = false;
+      this.closeAccordion(index)
     }
   }
 
@@ -49,4 +54,8 @@ export class FocusTrapComponent implements OnInit {
     this.isFocusTrapEnabled = false;
   }
 
+  closeAccordion(index: number) {
+    this.activeTabs[index] = !this.activeTabs[index]
+    this.isFocusTrapEnabled = false;  
+  }
 }

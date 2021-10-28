@@ -2,7 +2,7 @@
     (onOpen)="onAccordionOpen()" 
     (onClose)="onAccordionClose()"
 >
-    <p-accordionTab header="Work Experience">
+    <p-accordionTab header="Work Experience" [(selected)]="activeTabs[0]">
         <div *ngIf="isFocusTrapEnabled" pFocusTrap>
             <form [formGroup]="experienceForm" action="">
                 <div class="grid">
@@ -38,6 +38,7 @@
                     </div>
                     <div class="col-12">
                         <p-checkbox
+                            [(ngModel)]="current"
                             formControlName="current"
                             class="col-6" 
                             name="current"
@@ -96,12 +97,24 @@
                             </div>
                     </div>
                     <div class="col-12 flex justify-content-center" style="margin-bottom: 1rem;">
-                        <button pButton class="p-button-raised">Select Portfolio Content</button>
+                        <button pButton class="p-button-raised">
+                            Select Portfolio Content
+                        </button>
                     </div>
                     <div class="col-12 flex justify-content-end">
                         <div class="col-4 flex justify-content-between">
-                            <button pButton class="p-button-outlined" label="Cancel"></button>
-                            <button (click)="formOnSubmit(experienceForm)" pButton class="p-button" label="Save"></button>    
+                            <button 
+                                pButton 
+                                class="p-button-outlined" 
+                                label="Cancel" 
+                                (click)="closeAccordion(0)">
+                            </button>
+                            <button 
+                                (click)="formOnSubmit(experienceForm, 0)" 
+                                pButton 
+                                class="p-button" 
+                                label="Save">
+                            </button>    
                         </div>
                     </div>
                 </div>
@@ -110,4 +123,4 @@
     </p-accordionTab>
 </p-accordion>
 
-<p-toast key="submitted" position="top-center"></p-toast>
+<p-toast key="submitted" position="bottom-center"></p-toast>
